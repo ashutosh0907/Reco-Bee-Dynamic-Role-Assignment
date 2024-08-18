@@ -27,7 +27,11 @@ const LoginScreen = ({navigation}) => {
   const options = ['Admin', 'Editor', 'Viewer'];
 
   const handleLogin = () => {
-    navigation.navigate('AppNavigator');
+    if (role == false) {
+      alert('Please select role!!');
+    } else {
+      navigation.navigate('AppNavigator');
+    }
   };
 
   const handleRoleChange = selectedRole => {
